@@ -4,6 +4,8 @@ const btn = document.querySelector(".btn");
 btn.disabled = true;
 select.value = "Choisissez un format";
 
+console.log(colorShown);
+
 colorShown.forEach((element) => {
   element.style.backgroundColor = `${element.innerHTML}60`;
 });

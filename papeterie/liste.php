@@ -11,7 +11,7 @@
     <title>Papier&co</title>
 </head>
 
-<body class="bg-light">
+<body>
     <div class="col-xxl-5 col-md-9 col-12 mx-auto my-4 p-5 bg-white shadow">
         <h1 class="text-center text-body-tertiary mb-4">
             Liste des commandes
@@ -67,12 +67,12 @@
                     <tr class="bg-light-subtle">
                         <td><?= strtoupper($paper["paper_format"]) ?></td>
                         <td><?= $paper["paper_thickness"] ?></td>
-                        <td id="colorShown"><?= strtoupper($paper["paper_color"]) ?></td>
+                        <td id="colorShown" class="border"><?= strtoupper($paper["paper_color"]) ?></td>
                         <td><?= $paper["paper_quantity"] ?></td>
                         <td><?= $paper["paper_isPhoto"] ? "Photo" : "Mat" ?></td>
                         <td>
                             <span data-toggle="tooltip" title="supprimer">
-                                <a class="text-danger px-3" href="controller/delete_paper.php?id=<?= $paper['paper_id'] ?>">
+                                <a class="text-danger px-3" href="./controller/delete_paper.php?id=<?= $paper['paper_id'] ?>">
                                     <img src="./style/trash.svg" alt="Poubelle" width="18px">
                                 </a>
                             </span>

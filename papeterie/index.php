@@ -104,7 +104,7 @@
         <div class="col-xl-5 col-sm-9 mx-auto mt-5">
             <input
                 type="submit"
-                class="form-control ms-2 rounded-pill btn btn-lg btn-outline-secondary py-2 mb-5"
+                class="form-control rounded-pill btn btn-lg btn-outline-secondary py-2 mb-5"
                 value="Commander">
             </input>
         </div>

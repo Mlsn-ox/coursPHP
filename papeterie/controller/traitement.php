@@ -1,6 +1,5 @@
 <?php
 if (!empty($_POST['paper_thickness']) && !empty($_POST['paper_quantity'])) {
-    // Ici on va verifier certaine valeur par cohérence.
     if ($_POST['paper_thickness'] <= 700 || $_POST['paper_thickness'] >= 35) {
         if ($_POST['paper_quantity'] <= 1000 || $_POST['paper_quantity'] >= 100) {
             try {

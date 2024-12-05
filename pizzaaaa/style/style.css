@@ -8,7 +8,7 @@
 }
 
 body {
-  background-color: #cccccc;
+  background: radial-gradient(circle, #b18d00 0%, #a13317 100%);
 }
 
 #formulaire {
@@ -18,12 +18,12 @@ body {
 
 .success {
   margin-top: 2rem;
-  color: #266e1c;
+  color: #9e5714;
   animation-name: fade;
   animation-duration: 2s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
-  animation-delay: 1s;
+  animation-delay: 3s;
 }
 
 .error {
@@ -35,6 +35,10 @@ body {
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   animation-delay: 3s;
+}
+
+.btn:hover {
+  background: radial-gradient(circle, #e7b900 0%, #d33e18 100%);
 }
 
 /*  
