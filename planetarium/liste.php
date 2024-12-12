@@ -21,7 +21,7 @@
                 <tr class="en-tete">
                     <th scope="col-1">Nom</th>
                     <th scope="col-1">Diamètre</th>
-                    <th scope="col-1">Epaisseur de l'atmosphere</th>
+                    <th scope="col-1">Atmosphère</th>
                     <th scope="col-1">Couleur</th>
                 </tr>
             </thead>
@@ -76,8 +76,8 @@
             </ul>
         </nav>
         <p class="text-center m-0">
-            <a href="index.php" class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-50-hover fs-5">
-                Enregistrer une nouvelle planète
+            <a href="index.html" class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-50-hover fs-5">
+                Retour à l'accueil
             </a>
         </p>
     </div>

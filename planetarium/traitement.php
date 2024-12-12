@@ -11,10 +11,10 @@ if (!empty($_POST['planet_name']) && !empty($_POST['planet_diameter']) && !empty
         $_POST['planet_atmo']
     ]);
     if ($valid) {
-        header("Location: index.php?message=Félicitations, planète ajoutée !&status=success");
+        header("Location: form.php?message=Félicitations, planète ajoutée !&status=success");
     } else {
-        header("Location: index.php?message=Erreur lors de l'enregistrement&status=error");
+        header("Location: form.php?message=Erreur lors de l'enregistrement&status=error");
     };
 } else {
-    header("Location: index.php?message=Veille à bien renseigner tous les champs !&status=error");
+    header("Location: form.php?message=Veille à bien renseigner tous les champs !&status=error");
 }

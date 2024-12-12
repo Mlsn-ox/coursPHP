@@ -1,5 +1,4 @@
 let planets = document.querySelectorAll("#titre");
-console.log(planets);
 
 planets.forEach((planet) => {
   planet.style.background = `linear-gradient(320deg, ${planet.dataset.color}15 0%, ${planet.dataset.color} 100%)`;

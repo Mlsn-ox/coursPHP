@@ -11,7 +11,7 @@
     <title>Planet'Futur</title>
 </head>
 
-<body class="p-2 p-xl-4 mb-4">
+<body class="p-2 mb-4">
     <div class="d-flex flex-wrap justify-content-center gap-3">
         <?php
         $pdo = new PDO("mysql:host=localhost;dbname=planetarium", "root", "1234");
@@ -24,10 +24,10 @@
         $stmt_planet_count = $pdo->query($sql_planet_count);
         $planet_count = $stmt_planet_count->fetch(PDO::FETCH_ASSOC);
         $total = $planet_count['total_planet'];
-        $limitPage = 30;
+        $limitPage = 10;
         $pageTotal = ceil($total / $limitPage);
         $offset = ($page * $limitPage) - $limitPage;
-        $sql = "SELECT * FROM planet ORDER BY planet_id ASC LIMIT $offset, $limitPage";
+        $sql = "SELECT * FROM planet ORDER BY planet_name ASC LIMIT $offset, $limitPage";
         $stmt = $pdo->query($sql);
         $planets = $stmt->fetchAll(PDO::FETCH_ASSOC);
         ob_start();
@@ -47,6 +47,7 @@
                         <li class="list-group-item fs-3 text-center"><?= ucfirst($planet["planet_name"]) ?></li>
                         <li class="list-group-item">Diamètre : <?= $planet["planet_diameter"] ?> km</li>
                         <li class="list-group-item">Atmosphere : <?= $planet["planet_atmo"] ?> km</li>
+                        <a href="update_planet.php?id=<?= $planet["planet_id"] ?>" class="rounded-0 btn btn-outline-light">Mettre à jour <?= ucfirst($planet["planet_name"]) ?></a>
                     </ul>
                 </div>
             </div>
@@ -55,7 +56,7 @@
         ob_end_flush();
         ?>
     </div>
-    <nav class="pt-1 pb-2">
+    <nav class="pt-3 pb-1">
         <ul class="pagination justify-content-center">
             <li class='page-item'><a class='page-link' href='cards.php?page=1'>
                     << </a>
@@ -70,8 +71,8 @@
             <li class='page-item'><a class='page-link' href='cards.php?page=<?= $pageTotal ?>'>>></a></li>
         </ul>
     </nav>
-    <div class="text-center mt-5 mx-auto div-lien">
-        <a href="index.php" class="lien py-4 px-5 rounded-pill border border-warning fs-4">Retour à l'enregistrement</a>
+    <div class="text-center mt-3 mx-auto div-lien">
+        <a href="index.html" class="lien py-3 px-4 rounded-pill border border-warning fs-5">Retour à l'accueil</a>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

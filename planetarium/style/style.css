@@ -14,10 +14,23 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   min-height: 100vh;
+  overflow: hidden;
 }
 
 form {
   height: 75vh;
+}
+
+.neonText {
+  color: #242424;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #f09,
+    0 0 82px #f09, 0 0 92px #f09, 0 0 102px #f09, 0 0 151px #f09;
+}
+
+.neonSmall {
+  color: #242424;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fa0, 0 0 42px #fa0,
+    0 0 82px #fa0;
 }
 
 .registre {
@@ -39,8 +52,9 @@ form {
 .lien {
   text-decoration: none;
   box-shadow: 2px 2px 15px 1px #000;
-  color: #0dcaf0;
+  color: #002b33;
   background-color: #ffffff25;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 18px #fa0;
 }
 
 .div-lien:hover {
