@@ -14,7 +14,10 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   min-height: 100vh;
-  overflow: hidden;
+}
+
+.ecran {
+  min-height: 80vh;
 }
 
 form {
@@ -96,6 +99,23 @@ form {
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   animation-delay: 5s;
+}
+
+.planet {
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  background-size: 500% 100%;
+  animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
 }
 
 /*  

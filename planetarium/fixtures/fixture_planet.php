@@ -13,17 +13,20 @@ $planets = $results["results"];
 
 foreach ($planets as $planet) {
     $planetName = $planet['name']['last'] . mt_rand(1, 9999);
-    $diam = round(mt_rand(15000, 160000), -3);
+    $diam = rand(15000, 160000);
     $color = '#' . substr(md5(rand()), 0, 6);
-    $atmo = round(mt_rand(2000, 10000), -1);
-
-    $sql = "INSERT into planet(planet_name, planet_diameter, planet_color, planet_atmo) 
-            VALUES (?,?,?,?)";
+    $atmo = rand(2000, 10000);
+    $pourcentage = rand(0, 100);
+    $isNull = $pourcentage > 10 ? 1 : 0;
+    $systemId =  $isNull ? rand(1, 33) : NULL;
+    $sql = "INSERT into planet(planet_name, planet_diameter, planet_color, planet_atmo, system_id) 
+            VALUES (?,?,?,?,?)";
     $stmt = $pdo->prepare($sql);
     $stmt->execute([
         $planetName,
         $diam,
         $color,
-        $atmo
+        $atmo,
+        $systemId
     ]);
 };

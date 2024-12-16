@@ -23,13 +23,13 @@ if (isset($_POST['planet_id'])) {
             $_POST['planet_atmo']
         ]);
         if ($valid) {
-            header("Location: form.php?message=Planète mise àjour !&status=success");
+            header("Location: ../update_planet.php?id=$id&message=Planète mise àjour !&status=success");
         } else {
-            header("Location: form.php?message=Erreur lors de l'enregistrement&status=error");
+            header("Location: ../update_planet.php?id=$id&message=Erreur lors de l'enregistrement&status=error");
         };
     } else {
-        header("Location: form.php?message=Veille à bien renseigner tous les champs !&status=error");
+        header("Location: ../update_planet.php?id=$id&message=Veille à bien renseigner tous les champs !&status=error");
     }
 } else {
-    header("Location: form.php?message=Erreur serveur&status=error");
+    header("Location: ../update_planet.php?id=$id&message=Erreur serveur&status=error");
 }
